@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>África em Vídeos e Imagens</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>África em Vídeos e Imagens</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Leitura por Voz</h2>
+            <p id="text-to-read">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <audio id="audio" controls>
+                <source src="{% static 'media/audio/output.mp3' %}" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <button onclick="speakText()">Ler em Voz Alta</button>
+            <button onclick="pauseAudio()">Pausar</button>
+            <button onclick="stopAudio()">Parar</button>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 África em Vídeos e Imagens</p>
+    </footer>
+
+    <!-- JavaScript separado -->
+    <script src="{% static 'blog/js/text_to_speech.js' %}"></script>
+</body>
+</html>
